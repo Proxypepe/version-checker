@@ -61,7 +61,7 @@ type Client struct {
 func New(ctx context.Context, log *logrus.Entry, opts *Options) (*Client, error) {
 	client := &Client{
 		Client: &http.Client{
-			Timeout:   time.Second * 120,
+			Timeout:   time.Second * 180,
 			Transport: cleanhttp.DefaultTransport(),
 		},
 		Options: opts,
